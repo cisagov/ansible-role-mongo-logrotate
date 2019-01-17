@@ -1,0 +1,17 @@
+# Default log rotation / compression keeps 1 year of logs.
+# Thanks to https://www.percona.com/blog/2018/09/27/automating-mongodb-log-rotation/
+/var/log/mongodb/*.log {
+    daily
+    rotate 365
+    dateext
+    missingok
+    compress
+    delaycompress
+    notifempty
+    extension gz
+    create 644 mongodb mongodb
+    sharedscripts
+    postrotate
+      /bin/kill -SIGUSR1 `cat /var/run/mongodb/mongod.pid 2>/dev/null` >/dev/null 2>&1
+    endscript
+}

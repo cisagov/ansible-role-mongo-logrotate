@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: David Redmin
+  description: Configure logrotate for MongoDB hosts
+  company: DHS NCATS
+  license: CC0
+  min_ansible_version: 2.0
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: Amazon
+      versions:
+        - 2018.03
+  galaxy_tags:
+    - logrotate
+    - mongodb
+
+dependencies:
+  - src: https://github.com/dhs-ncats/ansible-role-logrotate
+    name: logrotate
