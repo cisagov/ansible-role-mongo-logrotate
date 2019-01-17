@@ -9,6 +9,16 @@ This role uses the `package` Ansible module, so [its
 requirements](https://docs.ansible.com/ansible/latest/modules/package_module.html#requirements)
 apply.
 
+**IMPORTANT:** In order for this log rotation to work correctly, your
+mongod configuration file (typically found in `/etc/mongod.conf`)
+must contain the following settings:
+```
+systemLog:
+    logRotate: reopen
+processManagement:
+    pidFilePath: /var/run/mongodb/mongod.pid
+```
+
 ## Role Variables ##
 
 None.

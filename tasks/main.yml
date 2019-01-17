@@ -1,0 +1,8 @@
+---
+# tasks file for mongo_logrotate
+
+- name: Install mongo-specific logrotate configuration
+  copy:
+    src: mongo
+    dest: /etc/logrotate.d/mongo
+    mode: 0644
