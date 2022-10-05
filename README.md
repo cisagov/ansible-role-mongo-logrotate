@@ -12,7 +12,8 @@ An Ansible role for installing and configuring
 **IMPORTANT:** In order for this log rotation to work correctly, your
 mongod configuration file (typically found in `/etc/mongod.conf`)
 must contain the following settings:
-```
+
+```yaml
 systemLog:
     logRotate: reopen
 processManagement:
