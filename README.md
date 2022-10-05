@@ -1,13 +1,13 @@
-# ansible-role-mongo-logrotate :ferris_wheel: #
+# ansible-role-mongo-logrotate #
+
+[![GitHub Build Status](https://github.com/cisagov/ansible-role-mongo-logrotate/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-mongo-logrotate/actions)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-mongo-logrotate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-mongo-logrotate/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-mongo-logrotate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-mongo-logrotate/context:python)
 
 An Ansible role for installing and configuring
 [`logrotate`](https://github.com/logrotate/logrotate) for MongoDB hosts.
 
 ## Requirements ##
-
-This role uses the `package` Ansible module, so [its
-requirements](https://docs.ansible.com/ansible/latest/modules/package_module.html#requirements)
-apply.
 
 **IMPORTANT:** In order for this log rotation to work correctly, your
 mongod configuration file (typically found in `/etc/mongod.conf`)
@@ -23,6 +23,13 @@ processManagement:
 
 None.
 
+<!--
+| Variable | Description | Default | Required |
+|----------|-------------|---------|----------|
+| optional_variable | Describe its purpose. | `default_value` | No |
+| required_variable | Describe its purpose. | n/a | Yes |
+-->
+
 ## Dependencies ##
 
 None.
@@ -31,15 +38,22 @@ None.
 
 Here's how to use it in a playbook:
 
-    - hosts: all
-      become: yes
-      become_method: sudo
-      roles:
-         - mongo_logrotate
+```yaml
+- hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+    - mongo_logrotate
+```
+
+## Contributing ##
+
+We welcome contributions!  Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for
+details.
 
 ## License ##
 
-This project is in the worldwide [public domain](LICENSE.md).
+This project is in the worldwide [public domain](LICENSE).
 
 This project is in the public domain within the United States, and
 copyright and related rights in the work worldwide are waived through
