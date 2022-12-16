@@ -1,7 +1,6 @@
 # ansible-role-mongo-logrotate #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-mongo-logrotate/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-mongo-logrotate/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-mongo-logrotate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-mongo-logrotate/alerts/)
 [![CodeQL](https://github.com/cisagov/ansible-role-mongo-logrotate/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-mongo-logrotate/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing and configuring
