@@ -1,8 +1,7 @@
 # ansible-role-mongo-logrotate #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-mongo-logrotate/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-mongo-logrotate/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-mongo-logrotate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-mongo-logrotate/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-mongo-logrotate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-mongo-logrotate/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-mongo-logrotate/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-mongo-logrotate/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing and configuring
 [`logrotate`](https://github.com/logrotate/logrotate) for MongoDB hosts.
@@ -43,8 +42,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - mongo_logrotate
+  tasks:
+    - name: Configure logrotate for MongoDB
+      ansible.builtin.include_role:
+        name: mongo_logrotate
 ```
 
 ## Contributing ##
