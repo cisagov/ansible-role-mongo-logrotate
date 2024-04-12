@@ -1,6 +1,4 @@
 ---
-# tasks file for mongo_logrotate
-
 - name: Install mongo-specific logrotate configuration
   ansible.builtin.copy:
     dest: /etc/logrotate.d/mongo
