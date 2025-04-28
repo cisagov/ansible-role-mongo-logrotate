@@ -2,5 +2,5 @@
 - name: Install mongo-specific logrotate configuration
   ansible.builtin.copy:
     dest: /etc/logrotate.d/mongo
-    mode: 0644
+    mode: u=rw,g=r,o=r
     src: mongo
